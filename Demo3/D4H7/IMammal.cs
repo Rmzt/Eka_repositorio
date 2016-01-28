@@ -4,6 +4,7 @@ namespace D4H7
 {
     interface IMammal
     {
-        //talk, legs
+        int Legs { get; set; }
+        string Talk();
     }
 }

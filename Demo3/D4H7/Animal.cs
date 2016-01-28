@@ -9,10 +9,10 @@ namespace D4H7
 
         public Animal() { }
 
-        public Animal(string x, int y)
+        public Animal(string name, int size)
         {
-            Name = x;
-            Size = y;
+            Name = name;
+            Size = size;
         }
     }
 }

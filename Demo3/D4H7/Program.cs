@@ -6,13 +6,13 @@ namespace D4H7
     {
         static void Main(string[] args)
         {
-            DataDisk eka = new CD("Musiikkia", 750, 12);
-            DataDisk toka = new DVD("Pelejä", 100000000, 12);
-            DataDisk kolmas = new Blu_ray("Elokuvia", 100000000, -5);
+            Cat kissa = new Cat("Mirri", 60, 4, "Persian");
+            Snek kaarme = new Snek("Snek", 100, false);
+            Fish kala = new Fish("Sushi", 5, 20);
 
-            Console.WriteLine(eka.Content + "\n" + eka.DataAmount + "\n" + eka.Diameter + "\n");
-            Console.WriteLine(toka.Content + "\n" + toka.DataAmount + "\n" + toka.Diameter + "\n");
-            Console.WriteLine(kolmas.Content + "\n" + kolmas.DataAmount + "\n" + kolmas.Diameter + "\n");
+            Console.WriteLine(kissa.Name + ", " + kissa.Size + ", " + kissa.Legs + ", " + kissa.Breed + ", " + kissa.Talk());
+            Console.WriteLine(kaarme.Name + ", " + kaarme.Size + ", " + kaarme.Venom + ", " + kaarme.Talk());
+            Console.WriteLine(kala.Name + ", " + kala.Size + ", " + kala.SwimSpeed);
 
             Console.ReadLine();
         }
