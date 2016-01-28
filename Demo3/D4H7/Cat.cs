@@ -17,6 +17,7 @@ namespace D4H7
             Breed = breed;
         }
 
+        // talk required
         public string Talk()
         {
             return "Miau!";
