@@ -14,6 +14,8 @@ namespace D4H7
             Console.WriteLine(kaarme.Name + ", " + kaarme.Size + ", " + kaarme.Venom + ", " + kaarme.Talk());
             Console.WriteLine(kala.Name + ", " + kala.Size + ", " + kala.SwimSpeed);
 
+            //-
+
             Console.ReadLine();
         }
     }
