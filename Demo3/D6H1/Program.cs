@@ -5,69 +5,10 @@ using System.Diagnostics;
 namespace D6H1
 {
     class Program
-    {
-        static private Random rand;
-
-        static string RandomString(int length)
-        {
-            string ret = "";
-            for (int i=0; i<length; i++)
-            {
-                ret += (char)rand.Next('A', 'Z');
-            }
-            return ret;
-        }
-
+    {                
         static void Main(string[] args)
         {
-            rand = new Random();
-
             List<Person> persons = new List<Person>();
-
-            const int personCount = 10000;
-
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
-
-            for  (int i=0; i<personCount; i++)
-            {
-                Person p = new Person(RandomString(12), RandomString(4), RandomString(8), rand.Next(1, 100), rand.Next(30, 140), rand.Next(100, 220));
-                persons.Add(p);
-            }
-
-            watch.Stop();
-            Console.WriteLine("Adding persons took " + watch.ElapsedMilliseconds + "ms");
-
-            watch.Restart();
-
-            for (int i=0; i<1000; i++)
-            {
-                string nameToFind = RandomString(4);
-                Person p = persons.Find(x => x.FirstName == nameToFind);
-                if (p != null)
-                {
-                    Console.WriteLine("Found person with firstname " + nameToFind + " : " + "asdf");
-                }
-            }
-
-            watch.Stop();
-            Console.WriteLine("Searching persons took " + watch.ElapsedMilliseconds + "ms");
-            /*
-            foreach(Person somebody in persons)
-            {
-                Console.Write(somebody.ToString());
-            }
-            */
-            Console.ReadLine();
-        }
-    }
-}
-
-
-
-
-/*
-List<Person> persons = new List<Person>();
 
             persons.Add(new Person("12345-5253", "Pekka", "Pouta", 39, 78, 183));
             persons.Add(new Person("32145-5653", "Seppo", "Pouta1", 28, 85, 178));
@@ -77,13 +18,14 @@ List<Person> persons = new List<Person>();
             persons.Add(new Person("12132421-5513", "Keijo", "Pouta6", 52, 95, 185));
             persons.Add(new Person("12432345-5453", "Milla", "Saari", 33, 55, 162));
             persons.Add(new Person("122345-5543", "Laura", "Kinnunen", 53, 60, 159));
-            
+            /*
             foreach (Person somebody in persons)
             {
                 Console.Write(somebody.ToString());
             }
-            
-persons.Sort((x, y) => x.Age.CompareTo(y.Age));
+            */
+
+            persons.Sort((x, y) => x.Age.CompareTo(y.Age));
 
             foreach (Person somebody in persons)
             {
@@ -103,7 +45,7 @@ persons.Sort((x, y) => x.Age.CompareTo(y.Age));
                 Console.WriteLine("Person not found!");
             }
 
-            for (int i = 0; i<persons.Count; i++)
+            for (int i = 0; i < persons.Count; i++)
             {
                 if (persons[i].Age == 1)
                 {
@@ -113,7 +55,7 @@ persons.Sort((x, y) => x.Age.CompareTo(y.Age));
                 }
             }
 
-            
+            /*
             foreach (Person somebody in persons)
             {
                 if (somebody.SSN == SSN)
@@ -122,6 +64,15 @@ persons.Sort((x, y) => x.Age.CompareTo(y.Age));
                     break;
                 }
             }
-            
-                Console.ReadLine();
-*/
+            */
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+
+
+
