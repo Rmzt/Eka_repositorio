@@ -92,7 +92,7 @@ namespace D6H4
 
             watch.Restart();
 
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 1000000; i++)
             {
                 string nameToFind = RandomString(4);
                 Person p = null;
